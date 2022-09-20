@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function SliderContent({ activeIndex, dataImages }) {
   return (
     <section>
@@ -14,5 +16,10 @@ function SliderContent({ activeIndex, dataImages }) {
     </section>
   );
 }
+
+SliderContent.propTypes = {
+  activeIndex: PropTypes.number.isRequired,
+  dataImages: PropTypes.array.isRequired,
+};
 
 export default SliderContent;

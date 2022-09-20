@@ -1,35 +1,34 @@
 import logo from "../assets/cloud9.png";
 import FooterList from "../components/FooterList";
 
-const menuList1 = {
-  title: "paradise beach",
-  features: [
-    "Welcome",
-    "Reservations",
-    "Accommodation",
-    "Things To Do",
-    "Location",
-    "Rates",
-    "Contact Us",
-    "Galler",
-    "Feedback",
-  ],
-};
-
-const menuList2 = {
-  title: "Cloud 9 Holidays",
-  features: [
-    "Offers",
-    "Gallery",
-    "About Us",
-    "Careers",
-    "Contact Us",
-    "Cookie Policy",
-    "Privacy Policy",
-  ],
-};
-
 function Footer() {
+  const menuList1 = {
+    title: "paradise beach",
+    features: [
+      "Welcome",
+      "Reservations",
+      "Accommodation",
+      "Things To Do",
+      "Location",
+      "Rates",
+      "Contact Us",
+      "Galler",
+      "Feedback",
+    ],
+  };
+
+  const menuList2 = {
+    title: "Cloud 9 Holidays",
+    features: [
+      "Offers",
+      "Gallery",
+      "About Us",
+      "Careers",
+      "Contact Us",
+      "Cookie Policy",
+      "Privacy Policy",
+    ],
+  };
   return (
     <div className="Footer">
       <div className="links">

@@ -4,7 +4,7 @@ import bs3 from "../../assets/bigSliderImages/bS3.jpg";
 import bs4 from "../../assets/bigSliderImages/bS4.jpg";
 import bs5 from "../../assets/bigSliderImages/bS5.jpg";
 
-export default [
+const images = [
   {
     title: "First Slide",
     url: bs1,
@@ -26,3 +26,5 @@ export default [
     url: bs5,
   },
 ];
+
+export default images;

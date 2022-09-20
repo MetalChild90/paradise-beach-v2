@@ -6,7 +6,7 @@ import bs5 from "../../assets/smallSliderImages/house-5.jpg";
 import bs6 from "../../assets/smallSliderImages/house-6.jpg";
 import bs7 from "../../assets/smallSliderImages/house-7.jpg";
 
-export default [
+const images = [
   {
     title: "First Slide",
     url: bs1,
@@ -36,3 +36,5 @@ export default [
     url: bs7,
   },
 ];
+
+export default images;

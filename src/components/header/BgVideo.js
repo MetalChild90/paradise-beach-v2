@@ -1,12 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import video from "../../assets/video.mp4";
 import islandImage from "../../assets/kliffs.png";
 // Video by Mikhail Nilov: https://www.pexels.com/video/drone-footage-of-rock-formations-in-the-shore-8357346/
 import Loader from "../Loader";
+import useToggle from "../../hooks/useToggle";
 
 const BgVideo = () => {
-  const [videoLoaded, setVideoLoaded] = useState(false);
-  const [activePlay, setActivePlay] = useState(true);
+  const [videoLoaded, setVideoLoaded] = useToggle(false);
+  const [activePlay, toggleActivePlay] = useToggle(true);
 
   const vidRef = useRef(null);
 
@@ -24,7 +25,7 @@ const BgVideo = () => {
     } else {
       playVideo();
     }
-    setActivePlay(!activePlay);
+    toggleActivePlay();
   }
 
   return (

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import BgVideo from "../components/header/BgVideo";
 import TopNav from "../components/header/TopNav";
 import $ from "jquery";
@@ -23,5 +24,10 @@ function Header({ fsOffset, isScrolled }) {
     </div>
   );
 }
+
+Header.propTypes = {
+  fsOffset: PropTypes.number.isRequired,
+  isScrolled: PropTypes.bool.isRequired,
+};
 
 export default Header;

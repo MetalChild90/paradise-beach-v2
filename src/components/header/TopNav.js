@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import MenuIcon from "./MenuIcon";
 
 function TopNav({ isScrolled }) {
@@ -11,5 +13,9 @@ function TopNav({ isScrolled }) {
     </div>
   );
 }
+
+TopNav.propTypes = {
+  isScrolled: PropTypes.bool.isRequired,
+};
 
 export default TopNav;

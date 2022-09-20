@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function FooterList({ menuList: { title, features } }) {
   return (
     <div className="column">
@@ -12,5 +14,10 @@ function FooterList({ menuList: { title, features } }) {
     </div>
   );
 }
+
+FooterList.propTypes = {
+  title: PropTypes.string,
+  features: PropTypes.array,
+};
 
 export default FooterList;

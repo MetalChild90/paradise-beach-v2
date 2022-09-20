@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import logo from "../../assets/cloud9.png";
 
 const menuList = [
@@ -45,4 +46,10 @@ function SideNav({ showSideNav, closeSidenav }) {
     </div>
   );
 }
+
+SideNav.propTypes = {
+  showSideNav: PropTypes.bool.isRequired,
+  closeSidenav: PropTypes.func.isRequired,
+};
+
 export default SideNav;

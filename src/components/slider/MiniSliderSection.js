@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Slider from "./Slider";
 
 function MiniSliderSection({
@@ -22,5 +23,13 @@ function MiniSliderSection({
     </div>
   );
 }
+
+MiniSliderSection.propTypes = {
+  images: PropTypes.array,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  features: PropTypes.array,
+  reverse: PropTypes.bool,
+};
 
 export default MiniSliderSection;

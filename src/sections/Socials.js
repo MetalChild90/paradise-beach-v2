@@ -1,11 +1,11 @@
-const iconNames = ["facebook-f", "twitter", "instagram"];
-const actionNames = [
-  { text: "Download a brochure", icon: "" },
-  { text: "Plan your stay", icon: "" },
-  { text: "Subscribe", icon: "envelope" },
-];
-
 const Socials = () => {
+  const iconNames = ["facebook-f", "twitter", "instagram"];
+  const actionNames = [
+    { text: "Download a brochure", icon: "" },
+    { text: "Plan your stay", icon: "" },
+    { text: "Subscribe", icon: "envelope" },
+  ];
+
   return (
     <section className="Socials">
       <div className="group">
@@ -35,6 +35,6 @@ const Socials = () => {
       </div>
     </section>
   );
-}
+};
 
 export default Socials;

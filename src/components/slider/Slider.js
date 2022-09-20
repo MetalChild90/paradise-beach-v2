@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import SliderContent from "./SliderContent";
 import Dots from "./Dots";
@@ -44,5 +45,10 @@ function Slider({ dataImages, bigSlider }) {
     </div>
   );
 }
+
+Slider.propTypes = {
+  dataImages: PropTypes.array.isRequired,
+  bigSlider: PropTypes.bool.isRequired,
+};
 
 export default Slider;

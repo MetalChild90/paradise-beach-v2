@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useEffect, useCallback } from "react";
 import $ from "jquery";
 
@@ -38,5 +39,10 @@ function FirstSection({ handleOffset, isScrolled }) {
     </div>
   );
 }
+
+FirstSection.propTypes = {
+  handleOffset: PropTypes.func.isRequired,
+  isScrolled: PropTypes.bool.isRequired,
+};
 
 export default FirstSection;

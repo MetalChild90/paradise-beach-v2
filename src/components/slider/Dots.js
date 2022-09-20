@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function Dots({ activeIndex, handleClick, dataImages }) {
   return (
     <div className="all-dots">
@@ -11,5 +13,11 @@ function Dots({ activeIndex, handleClick, dataImages }) {
     </div>
   );
 }
+
+Dots.propTypes = {
+  activeIndex: PropTypes.number.isRequired,
+  handleClick: PropTypes.func.isRequired,
+  dataImages: PropTypes.array.isRequired,
+};
 
 export default Dots;
