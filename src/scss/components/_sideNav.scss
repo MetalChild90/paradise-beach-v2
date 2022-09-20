@@ -1,0 +1,117 @@
+.SideNav {
+  position: fixed;
+  top: 0;
+  left: -350px;
+
+  width: 350px;
+
+  font-size: 20px;
+
+  color: $white;
+  background-color: $blue-main;
+
+  transition-duration: $trd;
+  z-index: 4;
+
+  &.active {
+    left: 0;
+  }
+
+  & .logo-container {
+    padding: 12px;
+    border-bottom: 1px solid $white;
+    border-right: 1px solid $white;
+
+    text-align: center;
+
+    background-color: $gray-main;
+
+    & .logo {
+      width: 92px;
+    }
+  }
+
+  & .reservation-input {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 15px;
+    margin: 30px 15px;
+    border-radius: $brr;
+
+    color: $blue-main;
+    background-color: $white;
+
+    cursor: pointer;
+
+    & .fa-calendar-days {
+      font-size: 30px;
+
+      color: $blue-main;
+    }
+  }
+
+  & .links {
+    padding-left: 40px;
+
+    & .news,
+    & .gallery {
+      line-height: 200%;
+
+      cursor: pointer;
+
+      @media (min-width: 1200px) {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  & .list-container {
+    margin-top: 40px;
+
+    & .list li {
+      margin-bottom: 20px;
+
+      @media (min-width: 1200px) {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+
+    & .list li:nth-last-child(1) {
+      margin-bottom: 40px;
+    }
+  }
+
+  & .close-side-menu {
+    @include flexCenter;
+
+    position: absolute;
+    top: 25px;
+    right: -23px;
+
+    height: 50px;
+    width: 50px;
+
+    border: 1px solid $white;
+    border-radius: $brround;
+
+    font-size: 30px;
+
+    color: $white;
+    background-color: $gray-main;
+
+    transition-duration: $trd;
+    cursor: pointer;
+    z-index: 4;
+
+    @media (min-width: 1200px) {
+      &:hover {
+        background-color: $nearly-black;
+      }
+    }
+  }
+}

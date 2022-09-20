@@ -1,0 +1,22 @@
+// BASE
+
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base/reset";
+@import "./base/app";
+@import "./base/loader";
+
+// COMPONENTS
+@import "./components/bgVideo";
+@import "./components/menuIcon";
+@import "./components/sideNav";
+@import "./components/topNav";
+@import "./components/slider";
+
+// SECTIONS
+@import "./sections/firstSection";
+@import "./sections/secondSection";
+@import "./sections/thirdSection";
+@import "./sections/socials";
+@import "./sections/header";
+@import "./sections/footer";

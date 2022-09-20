@@ -1,0 +1,45 @@
+.MenuIcon {
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  padding: 5px 25px 5px 45px;
+  margin-top: 14px;
+  border-radius: 0 $brr $brr 0;
+
+  font-size: 22px;
+
+  color: $white;
+
+  transition-duration: $trd;
+  cursor: pointer;
+  z-index: 2;
+
+  @media (min-width: 1200px) {
+    padding: 10px 25px 10px 45px;
+    margin-top: 20px;
+
+    font-size: 30px;
+
+    &:hover {
+      background-color: $nearly-black;
+    }
+  }
+
+  &.scrolled {
+    background-color: $blue-main;
+
+    @media (min-width: 1200px) {
+      &:hover {
+        background-color: $nearly-black;
+      }
+    }
+  }
+
+  & .menu-text {
+    margin-left: 15px;
+  }
+}

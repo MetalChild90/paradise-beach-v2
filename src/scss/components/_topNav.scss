@@ -1,0 +1,94 @@
+.TopNav {
+  position: fixed;
+
+  height: 70px;
+  width: 100%;
+
+  background-color: rgba(23, 59, 126, 0.247);
+
+  transition: 1s;
+  z-index: 5;
+
+  @media (min-width: 1200px) {
+    height: 110px;
+  }
+
+  &.scrolled {
+    background-color: $white;
+  }
+
+  & .title {
+    display: none;
+
+    position: absolute;
+    top: 2vh;
+    left: 50%;
+
+    text-align: center;
+
+    font-weight: 300;
+    font-family: "Julius Sans One", "Helvetica Neue", Arial, Helvetica, Geneva,
+      sans-serif;
+
+    color: $white;
+    border-bottom: 2px solid $blue-main;
+
+    transform: translateX(-50%);
+    transition: 1s;
+    z-index: 2;
+
+    @media (orientation: landscape) and (max-width: 900px) {
+      top: 5vh;
+    }
+
+    @media (min-width: 768px) {
+      display: block;
+
+      font-size: 30px;
+    }
+
+    @media (min-width: 1200px) {
+      top: 3vh;
+      font-size: 45px;
+    }
+
+    &.scrolled {
+      border-bottom: none;
+
+      color: $nearly-black;
+    }
+  }
+
+  & .book-btn {
+    position: fixed;
+    top: 15px;
+    right: 35px;
+
+    text-transform: uppercase;
+
+    padding: 10px 20px;
+    border-radius: $brr;
+
+    font-size: 15px;
+
+    color: $white;
+    background-color: $blue-main;
+
+    transition-duration: $trd;
+    cursor: pointer;
+    z-index: 3;
+
+    @media (min-width: 1200px) {
+      top: 25px;
+      right: 45px;
+
+      padding: 15px 25px;
+
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: $nearly-black;
+    }
+  }
+}

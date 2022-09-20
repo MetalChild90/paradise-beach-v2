@@ -1,0 +1,107 @@
+.Slider {
+  position: relative;
+
+  &.slider-container {
+    height: 90vh;
+  }
+
+  &.slider-container-small {
+    height: 50vh;
+
+    margin-bottom: 50px;
+
+    @media (orientation: landscape) and (max-width: 900px) {
+      height: 80vh;
+    }
+
+    @media (min-width: 1200px) {
+      width: 40vw;
+    }
+  }
+
+  & .image-box {
+    display: block;
+
+    transition-duration: 0.6s;
+
+    &.active {
+      opacity: 1;
+    }
+
+    &.inactive {
+      opacity: 0;
+    }
+
+    & .slide-image {
+      position: absolute;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  & .arrow {
+    position: absolute;
+    top: 50%;
+
+    padding: 0.5rem 1rem;
+    border-radius: $brr;
+
+    font-size: 30px;
+
+    color: $white;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    transition-duration: $trd;
+    cursor: pointer;
+
+    &.prev {
+      left: 20px;
+    }
+
+    &.next {
+      right: 20px;
+    }
+
+    @media (min-width: 1200px) {
+      padding: 0.75rem 1.5rem;
+      font-size: 35px;
+
+      @media (min-width: 1200px) {
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.9);
+        }
+      }
+    }
+  }
+
+  & .all-dots {
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    top: 105%;
+
+    width: 100%;
+
+    & .dot {
+      display: block;
+
+      height: 16px;
+      width: 16px;
+
+      margin: 0px 3px;
+      border-radius: $brround;
+
+      background-color: $nearly-black;
+
+      cursor: pointer;
+
+      &.active {
+        background-color: rgba(86, 124, 207);
+      }
+    }
+  }
+}

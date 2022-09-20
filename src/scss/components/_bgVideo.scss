@@ -1,0 +1,73 @@
+.BgVideo {
+  position: relative;
+
+  height: auto;
+  max-height: 100vh;
+
+  overflow: hidden;
+
+  & .video {
+    display: none;
+
+    height: 100vh;
+    width: 100vw;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  & .videoOverlay {
+    display: none;
+
+    @include posaTopLeft;
+
+    height: 100%;
+    width: 100vw;
+
+    cursor: pointer;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+
+    & .video-button {
+      @include centerAbsolute;
+
+      border: none;
+
+      font-size: 100px;
+
+      color: rgba(243, 233, 233, 0.6);
+      background-color: transparent;
+      opacity: 0;
+
+      transition-duration: $trd;
+      cursor: pointer;
+      z-index: 3;
+
+      &.active {
+        opacity: 1;
+      }
+      @media (min-width: 1200px) {
+        &:hover {
+          color: rgba(243, 233, 233, 0.9);
+        }
+      }
+    }
+  }
+
+  & .video-replacement {
+    display: block;
+
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+  }
+}
