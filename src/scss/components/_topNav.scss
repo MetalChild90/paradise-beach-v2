@@ -14,7 +14,9 @@
   }
 
   &.scrolled {
-    background-color: $white;
+    @media (min-width: 1200px) {
+      background-color: $white;
+    }
   }
 
   & .title {

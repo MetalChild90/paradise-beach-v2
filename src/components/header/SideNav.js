@@ -6,7 +6,7 @@ const menuList = [
   "Accommodation",
   "Things To Do",
   "Location",
-  "ates",
+  "Rates",
   "Offers",
   "Contact Us",
 ];
@@ -22,12 +22,14 @@ function SideNav({ showSideNav, closeSidenav }) {
         <i className="fa-solid fa-calendar-days"></i>
       </div>
       <div className="links">
-        <p>
-          <strong className="news">Latest News</strong>
-        </p>
-        <p>
-          <strong className="gallery">Gallery</strong>
-        </p>
+        <div>
+          <p>
+            <strong className="news">Latest News</strong>
+          </p>
+          <p>
+            <strong className="gallery">Gallery</strong>
+          </p>
+        </div>
         <div className="list-container">
           <ul className="list">
             {menuList.map((item, i) => (

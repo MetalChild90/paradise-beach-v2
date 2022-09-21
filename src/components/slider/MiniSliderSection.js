@@ -6,10 +6,7 @@ function MiniSliderSection({
   apartment: { name, description, features, reverse },
 }) {
   return (
-    <div
-      className="miniSliderSection"
-      style={{ flexDirection: reverse ? "row-reverse" : "row" }}
-    >
+    <div className={`miniSliderSection ${reverse && "reverse"}`}>
       <Slider bigSlider={false} dataImages={images} />
       <div className="infoBox">
         <h3>{name}</h3>
@@ -25,7 +22,7 @@ function MiniSliderSection({
 }
 
 MiniSliderSection.propTypes = {
-  images: PropTypes.array,
+  images: PropTypes.array.isRequired,
   name: PropTypes.string,
   description: PropTypes.string,
   features: PropTypes.array,

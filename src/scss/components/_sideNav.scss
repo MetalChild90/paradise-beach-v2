@@ -13,6 +13,16 @@
   transition-duration: $trd;
   z-index: 4;
 
+  @media (max-width: 800px) and (orientation: landscape) {
+    position: fixed;
+    top: 0;
+    left: -404px;
+
+    width: 60vw;
+
+    font-size: 16px;
+  }
+
   &.active {
     left: 0;
   }
@@ -28,6 +38,10 @@
 
     & .logo {
       width: 92px;
+    }
+
+    @media (max-width: 800px) and (orientation: landscape) {
+      display: none;
     }
   }
 
@@ -49,6 +63,15 @@
 
       color: $blue-main;
     }
+
+    @media (max-width: 800px) and (orientation: landscape) {
+      padding: 10px;
+      margin: 20px 40px 20px 40px;
+
+      & .fa-calendar-days {
+        font-size: 20px;
+      }
+    }
   }
 
   & .links {
@@ -60,16 +83,34 @@
 
       cursor: pointer;
 
+      @media (max-width: 800px) and (orientation: landscape) {
+        margin-right: 40px;
+      }
+
       @media (min-width: 1200px) {
         &:hover {
           opacity: 0.8;
         }
       }
     }
+
+    @media (max-width: 800px) and (orientation: landscape) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
   }
 
   & .list-container {
     margin-top: 40px;
+
+    @media (max-width: 400px) and (orientation: portrait) {
+      margin-top: 15px;
+    }
+
+    @media (max-width: 800px) and (orientation: landscape) {
+      margin-top: 0;
+    }
 
     & .list li {
       margin-bottom: 20px;
@@ -107,6 +148,17 @@
     transition-duration: $trd;
     cursor: pointer;
     z-index: 4;
+
+    @media (max-width: 800px) and (orientation: landscape) {
+      position: absolute;
+      top: 15px;
+      right: -13px;
+
+      height: 30px;
+      width: 30px;
+
+      font-size: 15px;
+    }
 
     @media (min-width: 1200px) {
       &:hover {

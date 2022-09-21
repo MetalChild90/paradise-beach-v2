@@ -6,23 +6,23 @@ import bs5 from "../../assets/bigSliderImages/bS5.jpg";
 
 const images = [
   {
-    title: "First Slide",
+    title: "House at night",
     url: bs1,
   },
   {
-    title: "Second Slide",
+    title: "Long table for 30 people",
     url: bs2,
   },
   {
-    title: "Third Slide",
+    title: "Pool and resting area",
     url: bs3,
   },
   {
-    title: "Fourth Slide",
+    title: "Table for romatinc dinner on the beach",
     url: bs4,
   },
   {
-    title: "Fifth Slide",
+    title: "Woman in wedding dress next to the pool",
     url: bs5,
   },
 ];

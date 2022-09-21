@@ -8,31 +8,31 @@ import bs7 from "../../assets/smallSliderImages/house-7.jpg";
 
 const images = [
   {
-    title: "First Slide",
+    title: "Bedroom without walls",
     url: bs1,
   },
   {
-    title: "Second Slide",
+    title: "Wooden living room",
     url: bs2,
   },
   {
-    title: "Third Slide",
+    title: "Full building and ocean",
     url: bs3,
   },
   {
-    title: "Fourth Slide",
+    title: "Toilet",
     url: bs4,
   },
   {
-    title: "Fifth Slide",
+    title: "Bedroom",
     url: bs5,
   },
   {
-    title: "Sixth Slide",
+    title: "Pool",
     url: bs6,
   },
   {
-    title: "Seventh Slide",
+    title: "Living room",
     url: bs7,
   },
 ];

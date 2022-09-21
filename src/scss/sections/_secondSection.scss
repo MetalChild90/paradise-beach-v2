@@ -29,6 +29,13 @@
 
       @media (min-width: 1200px) {
         flex-direction: row;
+        // margin-bottom: 100px;
+      }
+
+      &.reverse {
+        @media (min-width: 1200px) {
+          flex-direction: row-reverse;
+        }
       }
 
       & .infoBox {
