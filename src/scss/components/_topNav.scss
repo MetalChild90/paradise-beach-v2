@@ -4,8 +4,7 @@
   height: 70px;
   width: 100%;
 
-  background-color: rgba(23, 59, 126, 0.247);
-
+  background-color: rgba(9, 95, 110, 0.692);
   transition: 1s;
   z-index: 5;
 
@@ -14,9 +13,7 @@
   }
 
   &.scrolled {
-    @media (min-width: 1200px) {
-      background-color: $white;
-    }
+    background-color: $white;
   }
 
   & .title {
@@ -87,10 +84,10 @@
       padding: 15px 25px;
 
       font-size: 20px;
-    }
 
-    &:hover {
-      background-color: $nearly-black;
+      &:hover {
+        background-color: $nearly-black;
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import "./scss/main.scss";
 import Header from "./sections/Header";
 import FirstSection from "./sections/FirstSection";
@@ -8,35 +8,35 @@ import Socials from "./sections/Socials";
 import Footer from "./sections/Footer";
 
 function App() {
-  const [firstSectionOffset, setFirstSectionOffset] = useState(0);
+  const [firstSectionOffsetTop, setFirstSectionOffsetTop] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  function handleOffset(offset) {
-    setFirstSectionOffset(offset);
-  }
-
-  const handleScroll = useCallback(() => {
-    const position = window.pageYOffset;
-    if (position >= firstSectionOffset / 2) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  }, [firstSectionOffset]);
-
   useEffect(() => {
+    const handleScroll = () => {
+      const position = window.pageYOffset;
+      if (position >= firstSectionOffsetTop / 2) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [handleScroll]);
+  }, [firstSectionOffsetTop]);
 
   return (
     <div className="App">
-      <Header fsOffset={firstSectionOffset} isScrolled={isScrolled} />
-      <FirstSection handleOffset={handleOffset} isScrolled={isScrolled} />
-      <SecondSection />
-      <ThirdSection />
+      <Header fsOffsetTop={firstSectionOffsetTop} isScrolled={isScrolled} />
+      <main>
+        <FirstSection
+          handleOffset={(value) => setFirstSectionOffsetTop(value)}
+          isScrolled={isScrolled}
+        />
+        <SecondSection />
+        <ThirdSection />
+      </main>
       <Socials />
       <Footer />
     </div>

@@ -1,24 +1,21 @@
 import PropTypes from "prop-types";
 import BgVideo from "../components/header/BgVideo";
 import TopNav from "../components/header/TopNav";
-import $ from "jquery";
 
-function Header({ fsOffset, isScrolled }) {
-  function transition() {
-    console.log("work");
-    $("html, body").animate(
-      {
-        scrollTop: fsOffset,
-      },
-      1000
-    );
-  }
+function Header({ fsOffsetTop, isScrolled }) {
+  
+  const scrollDown = () => {
+    window.scrollTo({
+      top: fsOffsetTop,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="Header">
       <TopNav isScrolled={isScrolled} />
       <BgVideo />
-      <span className="go-down" onClick={transition}>
+      <span className="go-down" onClick={scrollDown}>
         <i className="fa-solid fa-chevron-down"></i>
       </span>
     </div>
@@ -26,7 +23,7 @@ function Header({ fsOffset, isScrolled }) {
 }
 
 Header.propTypes = {
-  fsOffset: PropTypes.number.isRequired,
+  fsOffsetTop: PropTypes.number.isRequired,
   isScrolled: PropTypes.bool.isRequired,
 };
 

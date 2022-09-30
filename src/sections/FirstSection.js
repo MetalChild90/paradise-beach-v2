@@ -1,24 +1,24 @@
 import PropTypes from "prop-types";
-import { useEffect, useCallback } from "react";
-import $ from "jquery";
+import { useEffect, useRef } from "react";
 
 function FirstSection({ handleOffset, isScrolled }) {
-  const handleResize = useCallback(() => {
-    const offset = $("#firstSection").offset().top;
-    handleOffset(offset);
-  }, [handleOffset]);
+  const firestSection = useRef(null);
 
   useEffect(() => {
+    const handleResize = () => {
+      handleOffset(firestSection.current.offsetTop);
+    };
+
     handleResize();
 
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [handleResize]);
+  }, [handleOffset]);
 
   return (
-    <div id="firstSection" className="FirstSection">
+    <div ref={firestSection} className="FirstSection">
       <div className="overlay">
         <div className={`info ${isScrolled && "active"}`}>
           <h3>About the Island</h3>
